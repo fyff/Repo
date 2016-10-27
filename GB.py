@@ -20,18 +20,18 @@ def duplicate_file(filename):
 
 
 def sys_info():
-    print("Вот что я знаю о системе")
-    print("Количество процессоров: ", psutil.cpu_count())
-    print("Платформа: ", sys.platform)
-    print("Кодировка файловой системы: ", sys.getfilesystemencoding())
-    print("Текущая директория: ", os.getcwd())
-    print("Текущая пользователь: ", os.getlogin())
+        print("That is what i know about system")
+        print("Number of processors: ", psutil.cpu_count())
+        print("Platform: ", sys.platform)
+        print("Encryption File System: ", sys.getfilesystemencoding())
+        print("Current directory: ", os.getcwd())
+        print("Current user: ", os.getlogin())
 
 
 def del_dublicats(dirname):
     file_list = os.listdir(dirname)
-   
-    # Счетчик количества удаленных файлов    
+
+    # Счетчик количества удаленных файлов
     doubl_count = 0
     # Цикл for перебирает все значения из списка file_list
     for f in file_list:
@@ -57,7 +57,7 @@ print(name, ", welcome to my programm!")
 answer = ''
 while answer != 'Q':
     answer = input("Would you like to work with me? (Y/N/Q)  ")
-        
+
     if answer == 'Y':
         print("So, i can:")
         print(" [1] - display a list of files")
@@ -68,16 +68,16 @@ while answer != 'Q':
         print(" [6] - remove files in current directory")
 
         do = int(input("Choose number: "))
-        
+
         if do == 1:
             print(os.listdir())
 
         elif do == 2:
         	sys_info()
-            
+
         elif do == 3:
             print(psutil.pids())
-            
+
         elif do == 4:
             print("Make files duplicate")
             file_list = os.listdir()
